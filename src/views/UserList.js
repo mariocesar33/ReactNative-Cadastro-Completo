@@ -4,18 +4,18 @@ import { ListItem, Button, Icon } from 'react-native-elements';
 
 import users from '../data/users';
 
-const UserList = (props) => {
+const UserList = props => {
   function confirmUserDeletion(user) {
     Alert.alert('Apagar Utilizador', 'Deseja apagar o utilizador?',
       [
         {
           text: 'Sim',
           onPress() {
-            console.warn("Apagado" + user.id);
+            console.warn("Apagado");
           }
         },
         {
-          text: 'Não'
+          text: 'Não',
         }
       ]
     );

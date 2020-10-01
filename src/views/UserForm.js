@@ -1,23 +1,13 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { Text } from 'react-native';
 
-import users from '../data/users';
+//import users from '../data/users';
 
-const UserForm = () => {
-
-  function getUserItem({ item : user }){
-    return <Text>{ user.email}</Text>
-  } 
-
+const UserForm = props => {
+  console.warn(Object.keys(props.route.params));
   return (
-    <View>
-      <FlatList
-      data={users}
-      keyExtractor={user => user.id}
-      renderItem={getUserItem}
-      />
-    </View>
+   <Text>USerForm</Text>
   );
-}
+};
 
 export default UserForm;
